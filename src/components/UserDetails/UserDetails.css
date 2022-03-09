@@ -6,8 +6,6 @@
 
 .user-container {
   display: flex;
-  /* width: 935px; */
-  /* height: 150px; */
   justify-content: center;
 }
 
@@ -35,7 +33,6 @@
 .user-date {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   width: 613px;
 }
 
