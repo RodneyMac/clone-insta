@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Nav from '../components/Nav';
 import UserDetails from '../components/UserDetails';
+import Following from '../components/Following';
 
 // const user = {
 //   name: "roddmacal",
@@ -15,11 +16,21 @@ import UserDetails from '../components/UserDetails';
 
 const ProfileView = () => {
   const user = useSelector((state) => state.user);
+  const common = useSelector((state) => state.common);
   console.log(user);
+  console.log(common);
+
+  // const [showModal, setShowModal] = useState(false);
+
+  const handleModal = () => {
+    // setShowModal(!showModal);
+  }
+
   return (
     <div>
       <Nav/>
-      <UserDetails user={user}/>
+      <UserDetails user={user} handleModal={handleModal}/>
+      {common.showModal && <Following/>}
     </div>
   )
 }
