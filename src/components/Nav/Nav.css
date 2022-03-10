@@ -7,4 +7,65 @@
 .nav-content {
   display: flex;
   justify-content: space-around;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid rgba(219,219,219,1) ;
+}
+
+.nav-logo {
+  width: 333px;
+  margin-top: 10px;
+}
+
+.nav-search {
+  padding: 0 16px;
+}
+
+.search-icon {
+  display: flex;
+  position: absolute;
+  margin: 10px;
+  color: #8e8e8e;
+}
+
+.nav-input {
+  width: 268px;
+  height: 36px;
+  background-color: #efefef;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding-left: 32px;
+  color: #8e8e8e;
+}
+
+.nav-icons {
+  display: flex;
+}
+
+/* .div-user-circle {
+  width: 25px;
+  height: 25px; 
+  border: 1px solid black;
+  border-radius: 100%;
+} */
+
+.user-circle {
+  border: 1px solid white;
+  border-radius: 100%;
+  margin-left: 24px;
+  background-image: url(img/img-perfil.jpg);
+  background-size: cover;
+  white-space: nowrap;
+}
+
+.div-icon {
+  display: flex;
+  padding-left: 24px;
+}
+
+.n-i {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
