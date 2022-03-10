@@ -6,7 +6,7 @@
 
 .nav-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   height: 60px;
   align-items: center;
   border-bottom: 1px solid rgba(219,219,219,1) ;
@@ -43,20 +43,19 @@
   display: flex;
 }
 
-/* .div-user-circle {
-  width: 25px;
-  height: 25px; 
-  border: 1px solid black;
-  border-radius: 100%;
-} */
-
 .user-circle {
-  border: 1px solid white;
-  border-radius: 100%;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 100px;
   margin-left: 24px;
-  background-image: url(img/img-perfil.jpg);
-  background-size: cover;
-  white-space: nowrap;
+  justify-content: center;
+}
+
+.img-nav-logo {
+  border: 1px solid white;
+  border-radius: 100px;
+  width: 24px;
+  margin-right: 23.5px;
 }
 
 .div-icon {
