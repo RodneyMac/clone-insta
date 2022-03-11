@@ -19,9 +19,9 @@ const UserDetails = (props) => {
               </div>
           </div>
           <div className='user-count'>
-              <div><strong>{props.user.post.length}</strong> post</div>  
-              <div><strong>{props.user.followers.length}</strong> followers</div>  
-              <div onClick={props.handleModal}><strong>{props.user.following.length}</strong> following</div>
+              <div className='div-count'><strong className='count-num'>{props.user.post.length} </strong> publicaciones</div>  
+              <div className='div-count'><strong className='count-num'>{props.user.followers.length}</strong> seguidores</div>  
+              <div className='div-count' onClick={props.handleModal}><strong className='count-num'>{props.user.following.length}</strong> seguidos</div>
           </div>
       </div>
     </div>
