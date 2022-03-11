@@ -6,7 +6,7 @@ import {FiPlusSquare} from "react-icons/fi";
 import {MdExplore} from "react-icons/md";
 import {AiOutlineHeart} from "react-icons/ai";
 import {BiSearch} from "react-icons/bi";
-import imgPerfil from "./img/img-perfil.jpg";
+import imgPerfil from "./img/user-picture.jpg";
 import "../Nav/Nav.css";
 
 const Nav = () => {
@@ -25,6 +25,7 @@ const Nav = () => {
                 <div className='div-icon'><MdExplore className="n-i"/></div>
                 <div className='div-icon'><AiOutlineHeart className="n-i"/></div>
                 <div className='user-circle div-icon n-i'><img src={imgPerfil} alt="img-logo-nav" className='img-nav-logo'/></div>
+                {/* <div className='user-circle div-icon n-i'>{props.user.img}</div> */}
             </div>
         </nav>
         {/* <hr/> */}
