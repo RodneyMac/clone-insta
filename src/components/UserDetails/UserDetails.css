@@ -55,6 +55,7 @@
 .user-configuration {
   display: flex;
   margin-left: 20px;
+  align-items: center;
 }
 
 .btn-edit {
@@ -71,8 +72,8 @@
 }
 
 .btn-config {
-  padding: 4px;
-  /* padding: 8px; */
+  /* padding: 4px; */
+  padding: 8px;
 }
 
 .boton-config {
@@ -81,7 +82,7 @@
 }
 
 .user-count {
-  display: flex;
+  display: flex;  
 }
 
 .div-count {
