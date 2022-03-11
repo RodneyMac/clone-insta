@@ -1,5 +1,6 @@
 import React from 'react';
 import "../UserDetails/UserDetails.css";
+import {RiSettings5Fill} from "react-icons/ri";
 // import imgPerfil from "../UserDetails/img/img-perfil.jpg";
 
 const UserDetails = (props) => {
@@ -11,10 +12,10 @@ const UserDetails = (props) => {
       </div>
       <div className='user-date'>
           <div className='user-content-date'>
-              <h2>{props.user.name}</h2>
+              <h1 className='user-name'>{props.user.name}</h1>
               <div className='user-configuration'>
-                  <div><button className='btn-edit'>Edit Profile</button></div>  
-                  <div>Config</div>
+                  <div><button className='btn-edit'>Editar Perfil</button></div>  
+                  <div className='btn-config'><RiSettings5Fill className='boton-config'/></div>
               </div>
           </div>
           <div className='user-count'>

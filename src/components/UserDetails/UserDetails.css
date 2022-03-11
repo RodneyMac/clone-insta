@@ -38,14 +38,41 @@
 
 .user-content-date {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
+  padding: 30px 20px 0px;
+}
+
+.user-name {
+  font-size: 28px;
+  font-family: sans-serif;
 }
 
 .user-configuration {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.btn-edit {
+  font-size: 14px;
+  color: #262626;
+  padding: 5px 9px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid rgba(219, 219, 219, 1);
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.btn-config {
+  padding: 4px;
+  /* padding: 8px; */
+}
+
+.boton-config {
+  width: 40px;
+  cursor: pointer;
 }
 
 .user-count {
