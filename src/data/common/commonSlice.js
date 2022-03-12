@@ -6,13 +6,13 @@ export const commonSlice = createSlice({
     showModal: true
   },
   reducers: {
-    showModal: (state) => {
+    changeModal: (state) => {
         state.showModal= !state.showModal
     }
 },
 })
 
 // Action creators are generated for each case reducer function
-export const { changeName } = commonSlice.actions
+export const { changeModal } = commonSlice.actions
 
 export default commonSlice.reducer

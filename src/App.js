@@ -4,7 +4,7 @@ import ProfileView from './view/ProfileView';
 function App() {
   return (
     <div className='App'>
-      <ProfileView/>
+        <ProfileView/>
     </div>
   );
 }

@@ -22,14 +22,10 @@ const ProfileView = () => {
 
   // const [showModal, setShowModal] = useState(false);
 
-  const handleModal = () => {
-    // setShowModal(!showModal);
-  }
-
   return (
     <div>
       <Nav/>
-      <UserDetails user={user} handleModal={handleModal}/>
+      <UserDetails user={user}/>
       {common.showModal && <Following/>}
     </div>
   )
