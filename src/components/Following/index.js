@@ -2,41 +2,49 @@ import React from 'react';
 import "../Following/Following.css";
 import {GrClose} from "react-icons/gr";
 import "../Following/FollowingCard.css";
-// import img1 from "./img/img-1.png";
+import img1 from "./img/img-1.png";
+import img2 from "./img/img-2.png";
+import img3 from "./img/img-3.png";
+import img4 from "./img/img-4.png";
+// import { useSelector } from 'react-redux';
 
 const seguidosPorMi = [
   {
     id: 1,
-    username: "1",
+    username: "johnnyrotten",
     name: "John",
-    img: "img1"
+    img: img1,
   },
   {
     id: 2,
-    username: "2",
+    username: "moonkate",
     name: "Kate",
-    img: "img2"
+    img: img2
   },
   {
     id: 3,
-    username: "3",
+    username: "paul_90",
     name: "Paul",
-    img: "img3"
+    img: img3
   },
   {
     id: 4,
-    username: "3",
+    username: "onlynani",
     name: "Hannah",
-    img: "img4"
+    img: img4
   }
 ]
+
+// const user = useSelector((state) => state.user);
 
 const FollowingCard = (props) => {
   return(
     <div className='following-card'>
-      <div className='img-card'>{props.data.img}</div>
-      <div className='name-card'>{props.data.name}{props.data.username}</div>
-      {/* <div className='username-card'>{props.data.username}</div> */}
+      <div className='img-card'><img src={props.data.img} alt="img-user" className='img-card-user'/></div>
+      <div className='div-names-user'>
+        <div className='username-card'>{props.data.username}</div>
+        <div className='name-card'>{props.data.name}</div>
+      </div>
       <div className='div-btn-following-card'>
         <button className='btn-following-card'>Siguiendo</button>
       </div>

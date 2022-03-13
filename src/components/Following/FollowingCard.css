@@ -1,3 +1,49 @@
 .following-card {
     display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+.img-card {
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+}
+
+.img-card-user {
+    width: 30px;
+    border-radius: 100px;
+}
+
+.div-names-user {
+    display: flex;
+    flex-direction: column;
+    width: 217px;
+}
+
+.username-card {
+    font-size: 14px;
+    color: #262626;
+    font-weight: 600;
+}
+
+.name-card {
+    font-size: 14px;
+    color: #8E8E8E;
+    margin: -3px 0px -4px;
+}
+
+.btn-following-card {
+    width: 83px;
+    height: 30px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(219, 219, 219, 1);
+    border-radius: 4px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
 }

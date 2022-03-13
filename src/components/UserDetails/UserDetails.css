@@ -46,9 +46,7 @@
 
 .user-name {
   font-size: 26px;
-  /* font-size: 28px; */
   font-family: "Quicksand", sans-serif;
-  /* font-family: "Roboto", sans-serif; */
   font-weight: 300;
 }
 
@@ -72,7 +70,6 @@
 }
 
 .btn-config {
-  /* padding: 4px; */
   padding: 8px;
 }
 
@@ -87,4 +84,8 @@
 
 .div-count {
   padding-left: 30px;
+}
+
+.d-c, .div-count {
+  cursor: pointer;
 }

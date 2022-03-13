@@ -27,7 +27,7 @@ const UserDetails = (props) => {
               </div>
           </div>
           <div className='user-count'>
-              <div><strong className='count-num'>{props.user.post.length} </strong> publicaciones</div>  
+              <div className='d-c'><strong className='count-num'>{props.user.post.length} </strong> publicaciones</div>  
               <div className='div-count'><strong className='count-num'>{props.user.followers.length}</strong> seguidores</div>  
               <div className='div-count' onClick={handleModal}><strong className='count-num'>{props.user.following.length}</strong> seguidos</div>
           </div>

@@ -3,17 +3,14 @@
     width: 400px;
     height: 310px;
     border: 1px solid gray;
-    /* border: 1px solid rgba(219,219,219,1); */
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .modal-header {
     display: flex;
     padding-left: 170px;
     justify-content: center;
-    width: 400px;
-    /* width: 304px; */
-    height: 42px;
+    height: 41px;
     border-bottom: 1px solid rgba(219,219,219,1);
     align-items: center;
 }
@@ -39,7 +36,6 @@
 .icon-exit {
     width: 24px;
     cursor: pointer;
-    /* width: 18px; */
 }
 
 .modal-items-personas {
