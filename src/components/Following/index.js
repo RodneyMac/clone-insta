@@ -6,6 +6,8 @@ import img1 from "./img/img-1.png";
 import img2 from "./img/img-2.png";
 import img3 from "./img/img-3.png";
 import img4 from "./img/img-4.png";
+// import { useDispatch } from 'react-redux';
+// import { changeModal } from '../../data/common/commonSlice';
 // import { useSelector } from 'react-redux';
 
 const seguidosPorMi = [
@@ -36,6 +38,8 @@ const seguidosPorMi = [
 ]
 
 // const user = useSelector((state) => state.user);
+
+// const dispatch = useDispatch();
 
 const FollowingCard = (props) => {
   return(

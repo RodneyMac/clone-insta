@@ -1,0 +1,93 @@
+.followers-modal-container {
+    width: 400px;
+    height: 400px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    margin: auto;
+}
+
+.followers-modal-header {
+    display: flex;
+    justify-content: center;
+    height: 42px;
+    border-bottom: 1px solid rgba(219,219,219,1);
+}
+
+.div-modal-h-1 {
+    width: 48px;
+    height: 42px;
+}
+
+.div-modal-h-title {
+    width: 304px;
+    height: 42px;
+    text-align: center;
+    padding: 8px;
+    font-size: 16px;
+    color: #262626;
+    font-weight: 600;
+}
+
+.div-modal-h-icon {
+    width: 48px;
+    height: 42px;
+    text-align: center;
+    padding: 8px;
+}
+.followers-icon-exit {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.followers-modal-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    width: 400px;
+}
+
+.f-modal-user-img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(219,219,219,1);
+    border-radius: 100%;
+}
+
+.f-modal-user-image {
+    width: 30px;
+    border-radius: 100px;
+}
+
+.f-modal-user-data {
+    width: 235px;
+}
+
+.f-modal-user-data-username {
+    font-size: 14px;
+    color: #262626;
+    font-weight: 600;
+}
+
+.f-modal-user-data-name {
+    font-size: 14px;
+    color: #8E8E8E;
+}
+
+.div-f-modal-btn {
+    width: 78px;
+}
+
+.f-modal-btn-eliminar {
+    padding: 5px 9px;
+    background-color: transparent;
+    color: #262626;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgba(219, 219, 219, 1);
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: #262626;
+    cursor: pointer;
+}

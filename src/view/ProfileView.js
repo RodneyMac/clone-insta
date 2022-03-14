@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import Nav from '../components/Nav';
 import UserDetails from '../components/UserDetails';
 import Following from '../components/Following';
+import Followers from '../components/Followers';
 
 // const user = {
 //   name: "roddmacal",
@@ -17,8 +18,8 @@ import Following from '../components/Following';
 const ProfileView = () => {
   const user = useSelector((state) => state.user);
   const common = useSelector((state) => state.common);
-  console.log(user);
-  console.log(common);
+  // console.log(user);
+  // console.log(common);
 
   // const [showModal, setShowModal] = useState(false);
 
@@ -27,6 +28,7 @@ const ProfileView = () => {
       <Nav/>
       <UserDetails user={user}/>
       {common.showModal && <Following/>}
+      <Followers/>
     </div>
   )
 }
