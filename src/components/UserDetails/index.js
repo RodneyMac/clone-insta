@@ -2,7 +2,7 @@ import React from 'react';
 import "../UserDetails/UserDetails.css";
 import {RiSettings5Fill} from "react-icons/ri";
 import { useDispatch } from 'react-redux';
-import { changeModal } from '../../data/common/commonSlice';
+import { changeModal, changeFollowersModal } from '../../data/common/commonSlice';
 // import imgPerfil from "../UserDetails/img/img-perfil.jpg";
 
 const UserDetails = (props) => {
@@ -11,6 +11,10 @@ const UserDetails = (props) => {
 
   const handleModal = () => {
     dispatch(changeModal());
+  }
+
+  const handleFollowersModal = () => {
+    dispatch(changeFollowersModal());
   }
 
   return(
@@ -28,7 +32,7 @@ const UserDetails = (props) => {
           </div>
           <div className='user-count'>
               <div className='d-c'><strong className='count-num'>{props.user.post.length} </strong> publicaciones</div>  
-              <div className='div-count'><strong className='count-num'>{props.user.followers.length}</strong> seguidores</div>  
+              <div className='div-count' onClick={handleFollowersModal}><strong className='count-num'>{props.user.followers.length}</strong> seguidores</div>  
               <div className='div-count' onClick={handleModal}><strong className='count-num'>{props.user.following.length}</strong> seguidos</div>
           </div>
       </div>

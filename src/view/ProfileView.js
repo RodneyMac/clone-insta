@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import Nav from '../components/Nav';
 import UserDetails from '../components/UserDetails';
@@ -28,7 +28,7 @@ const ProfileView = () => {
       <Nav/>
       <UserDetails user={user}/>
       {common.showModal && <Following/>}
-      <Followers/>
+      {common.showFollowersModal && <Followers/>}
     </div>
   )
 }

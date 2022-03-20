@@ -6,7 +6,8 @@ import img1 from "./img/img-1.png";
 import img2 from "./img/img-2.png";
 import img3 from "./img/img-3.png";
 import img4 from "./img/img-4.png";
-// import { useDispatch } from 'react-redux';
+import {closeModal} from "../../data/common/commonSlice";
+import { useDispatch } from 'react-redux';
 // import { changeModal } from '../../data/common/commonSlice';
 // import { useSelector } from 'react-redux';
 
@@ -39,10 +40,9 @@ const seguidosPorMi = [
 
 // const user = useSelector((state) => state.user);
 
-// const dispatch = useDispatch();
 
 const FollowingCard = (props) => {
-  return(
+    return(
     <div className='following-card'>
       <div className='img-card'><img src={props.data.img} alt="img-user" className='img-card-user'/></div>
       <div className='div-names-user'>
@@ -57,9 +57,14 @@ const FollowingCard = (props) => {
 }
 
 const Following = () => {
+  const dispatch = useDispatch();
+
+  const handleCloseModal = () => {
+    dispatch(closeModal());
+  }
   return (
     <div className='modal-container'>
-        <div className='modal-header'><h2 className='modal-title'>Siguiendo</h2><div className='div-icon-exit'><GrClose className='icon-exit'/></div></div>
+        <div className='modal-header'><h2 className='modal-title'>Siguiendo</h2><div className='div-icon-exit'><GrClose className='icon-exit' onClick={handleCloseModal}/></div></div>
         <div className='modal-items'>
           <div className='modal-items-personas'>Personas</div>
           <div className='modal-items-hashtags'>Hashtags</div>

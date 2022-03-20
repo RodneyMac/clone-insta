@@ -3,16 +3,30 @@ import { createSlice } from '@reduxjs/toolkit';
 export const commonSlice = createSlice({
   name: 'common',
   initialState: {
-    showModal: false
+    showModal: false,
+    showFollowersModal: false,
   },
   reducers: {
     changeModal: (state) => {
-        state.showModal= !state.showModal
+      state.showFollowersModal = false;
+      if(!state.showModal) {
+        state.showModal = !state.showModal
+      }
+    },
+    changeFollowersModal: (state) => {
+      state.showModal = false;
+      if(!state.showFollowersModal) {
+        state.showFollowersModal = !state.showFollowersModal
+      }
+    },
+    closeModal: (state) => {
+      state.showModal = false;
+      state.showFollowersModal = false;
     }
-},
+  },
 })
 
 // Action creators are generated for each case reducer function
-export const { changeModal } = commonSlice.actions
+export const { changeModal, changeFollowersModal, closeModal } = commonSlice.actions
 
 export default commonSlice.reducer
