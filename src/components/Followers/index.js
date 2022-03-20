@@ -2,22 +2,68 @@ import React from 'react';
 import "../Followers/Followers.css";
 import {GrClose} from "react-icons/gr";
 import image3 from "./img/img-3.png";
+import {closeModal} from "../../data/common/commonSlice";
+import { useDispatch } from 'react-redux';
+
+const seguidores = [
+  {
+    id: 1,
+    username: "uno",
+    name: "Uno",
+    img: image3,
+  },
+  {
+    id: 2,
+    username: "dos",
+    name: "Dos",
+    img: image3,
+  },
+  {
+    id: 3,
+    username: "tres",
+    name: "Tres",
+    img: image3,
+  },
+  {
+    id: 4,
+    username: "cuatro",
+    name: "Cuatro",
+    img: image3,
+  }
+]
+
+const FollowersCard = (props) => {
+  return(
+    <div className='followers-modal-content'>
+      <div className='f-modal-user-img'><img src={props.data.img} alt="image-3" className='f-modal-user-image'/></div>
+        <div className='f-modal-user-data'>
+          <div className='f-modal-user-data-username'>{props.data.username}</div>
+          <div className='f-modal-user-data-name'>{props.data.name}</div>
+        </div>
+        <div className='div-f-modal-btn'><button className='f-modal-btn-eliminar'>Eliminar</button></div>
+    </div>
+  )
+}
 
 const Followers = () => {
+
+const dispatch = useDispatch();
+
+const handleCloseModalFollowers = () => {
+  dispatch(closeModal());
+}
+
   return (
     <div className='followers-modal-container'>
         <div className='followers-modal-header'>
             <div className='div-modal-h-1'></div>
             <div className='div-modal-h-title'>Seguidores</div>
-            <div className='div-modal-h-icon'><GrClose className='followers-icon-exit'/></div>
+            <div className='div-modal-h-icon'><GrClose className='followers-icon-exit' onClick={handleCloseModalFollowers}/></div>
         </div>
-        <div className='followers-modal-content'>
-            <div className='f-modal-user-img'><img src={image3} alt="image-3" className='f-modal-user-image'/></div>
-            <div className='f-modal-user-data'>
-                <div className='f-modal-user-data-username'>paul_90</div>
-                <div className='f-modal-user-data-name'>Paul</div>
-            </div>
-            <div className='div-f-modal-btn'><button className='f-modal-btn-eliminar'>Eliminar</button></div>
+        <div>
+          {seguidores.map(item => (
+            <FollowersCard key={item.id} data={item}/>
+          ))}
         </div>
     </div>
   )
