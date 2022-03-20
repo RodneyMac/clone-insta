@@ -8,17 +8,21 @@
 
 .modal-header {
     display: flex;
-    padding-left: 170px;
-    justify-content: center;
-    height: 41px;
+    height: 42px;
     border-bottom: 1px solid rgba(219,219,219,1);
     align-items: center;
+}
+
+.div-1 {
+    width: 50px;
+    margin-left: 80px;
 }
 
 .modal-title {
     font-size: 16px;
     font-weight: 600;
     color: #262626;
+    margin-left: 50px;
 }
 
 .modal-items {
@@ -28,13 +32,15 @@
 
 .div-icon-exit {
     display: flex;
-    width: 40px;
+    width: 50px;
     padding: 8px;
     margin-left: 120px;
 }
 
 .icon-exit {
-    width: 24px;
+    width: 18px;
+    height: 18px;
+    font-weight: 900;
     cursor: pointer;
 }
 

@@ -1,34 +1,37 @@
 import React from 'react';
 import "../Followers/Followers.css";
 import {GrClose} from "react-icons/gr";
+import image1 from "./img/img-1.png";
+import image2 from "./img/img-2.png";
 import image3 from "./img/img-3.png";
+import image4 from "./img/img-4.png";
 import {closeModal} from "../../data/common/commonSlice";
 import { useDispatch } from 'react-redux';
 
 const seguidores = [
   {
     id: 1,
-    username: "uno",
-    name: "Uno",
-    img: image3,
+    username: "johnnyrotten",
+    name: "John",
+    img: image1,
   },
   {
     id: 2,
-    username: "dos",
-    name: "Dos",
-    img: image3,
+    username: "moonkate",
+    name: "Kate",
+    img: image2,
   },
   {
     id: 3,
-    username: "tres",
-    name: "Tres",
+    username: "paul_90",
+    name: "Paul",
     img: image3,
   },
   {
     id: 4,
-    username: "cuatro",
-    name: "Cuatro",
-    img: image3,
+    username: "onlynani",
+    name: "Hannah",
+    img: image4,
   }
 ]
 

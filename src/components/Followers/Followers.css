@@ -1,6 +1,6 @@
 .followers-modal-container {
     width: 400px;
-    height: 400px;
+    height: 310px;
     border: 1px solid gray;
     border-radius: 12px;
     margin: auto;
@@ -19,6 +19,9 @@
 }
 
 .div-modal-h-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 304px;
     height: 42px;
     text-align: center;
@@ -29,14 +32,13 @@
 }
 
 .div-modal-h-icon {
-    width: 48px;
-    height: 42px;
-    text-align: center;
+    display: flex;
+    align-items: center;
     padding: 8px;
 }
 .followers-icon-exit {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
 }
 
