@@ -37,7 +37,32 @@ export const userSlice = createSlice({
       }
     ],
     post: [],
-    following: [],
+    following: [
+      {
+        id: 1,
+        username: "johnnyrotten",
+        name: "John",
+        img: image1,
+      },
+      {
+        id: 2,
+        username: "moonkate",
+        name: "Kate",
+        img: image2
+      },
+      {
+        id: 3,
+        username: "paul_90",
+        name: "Paul",
+        img: image3
+      },
+      {
+        id: 4,
+        username: "onlynani",
+        name: "Hannah",
+        img: image4
+      }
+    ],
     img: "https://illumesense.com/resources/illumesense/style/img/website/profile-picture-blanks/male-profile.jpg"
   },
   reducers: {

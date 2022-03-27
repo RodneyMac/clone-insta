@@ -2,7 +2,7 @@ import React from 'react';
 import "../Followers/Followers.css";
 import {GrClose} from "react-icons/gr";
 import {closeModal} from "../../data/common/commonSlice";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import {deleteFollower} from "../../data/user/userSlice";
 
 

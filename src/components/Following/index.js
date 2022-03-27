@@ -2,39 +2,8 @@ import React from 'react';
 import "../Following/Following.css";
 import {GrClose} from "react-icons/gr";
 import "../Following/FollowingCard.css";
-import img1 from "./img/img-1.png";
-import img2 from "./img/img-2.png";
-import img3 from "./img/img-3.png";
-import img4 from "./img/img-4.png";
 import {closeModal} from "../../data/common/commonSlice";
-import { useDispatch } from 'react-redux';
-
-const seguidosPorMi = [
-  {
-    id: 1,
-    username: "johnnyrotten",
-    name: "John",
-    img: img1,
-  },
-  {
-    id: 2,
-    username: "moonkate",
-    name: "Kate",
-    img: img2
-  },
-  {
-    id: 3,
-    username: "paul_90",
-    name: "Paul",
-    img: img3
-  },
-  {
-    id: 4,
-    username: "onlynani",
-    name: "Hannah",
-    img: img4
-  }
-]
+import { useSelector, useDispatch } from 'react-redux';
 
 const FollowingCard = (props) => {
     return(
@@ -52,6 +21,8 @@ const FollowingCard = (props) => {
 }
 
 const Following = () => {
+  const user = useSelector((state) => state.user);
+
   const dispatch = useDispatch();
 
   const handleCloseModal = () => {
@@ -65,7 +36,7 @@ const Following = () => {
           <div className='modal-items-hashtags'>Hashtags</div>
         </div>
         <div>
-          {seguidosPorMi.map(item => (
+          {user.following.map(item => (
             <FollowingCard data={item} key={item.id}/>
           ))}
         </div>
