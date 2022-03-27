@@ -65,6 +65,9 @@ export const userSlice = createSlice({
     ],
     img: "https://illumesense.com/resources/illumesense/style/img/website/profile-picture-blanks/male-profile.jpg"
   },
+
+  unfollow: true,
+
   reducers: {
     changeName: (state) => {
         state.name= "Usuario"
@@ -74,11 +77,40 @@ export const userSlice = createSlice({
         ...state,
         followers: state.followers.filter((item) => item.id != action.payload.id)
       })
+    },
+    followUnfollow: (state) => {
+        if(state.unfollow) {
+          return {
+            unfollow: !state.unfollow
+          }
+        }
+        return state
     }
+    // followUnfollow: (state, action) => {
+    //   return({
+    //     ...state,
+    //     following: state.following.filter((item) => item.id != action.payload.id ? true : false)
+    //   });
+    // }
+    // unfollow: (state) => {
+    //     state.following = true ? "Siguiendo" : "Seguir";
+    // }
+    // unfollow: (state, action) => {
+    //   return({
+    //     ...state,
+    //     following: state.following.filter((item) => item.id != action.payload.id && item.id === true ? "Siguiendo" : "Seguir")
+    //   })
+    // }
+    // unfollow: (state, action) => {
+    //   return({
+    //     ...state,
+    //     following: state.following.filter((item) => item.id != action.payload.id)
+    //   });
+    // }
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { changeName, deleteFollower} = userSlice.actions
+export const { changeName, deleteFollower, followUnfollow} = userSlice.actions
 
 export default userSlice.reducer

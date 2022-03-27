@@ -4,8 +4,17 @@ import {GrClose} from "react-icons/gr";
 import "../Following/FollowingCard.css";
 import {closeModal} from "../../data/common/commonSlice";
 import { useSelector, useDispatch } from 'react-redux';
+import {followUnfollow} from "../../data/user/userSlice";
 
 const FollowingCard = (props) => {
+
+    const dispatch = useDispatch();
+    const show = true ? "Siguiendo" : "Seguir";
+
+    const handleFollowingClick = () => {
+      dispatch(followUnfollow(show));
+    }
+
     return(
     <div className='following-card'>
       <div className='img-card'><img src={props.data.img} alt="img-user" className='img-card-user'/></div>
@@ -14,7 +23,8 @@ const FollowingCard = (props) => {
         <div className='name-card'>{props.data.name}</div>
       </div>
       <div className='div-btn-following-card'>
-        <button className='btn-following-card'>Siguiendo</button>
+        <button className='btn-following-card' onClick={handleFollowingClick}>{show}</button>
+        {/* <button className='btn-following-card'>Siguiendo</button> */}
       </div>
     </div>
   )
