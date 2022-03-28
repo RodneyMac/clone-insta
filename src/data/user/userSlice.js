@@ -4,6 +4,8 @@ import image2 from "../../components/Followers/img/img-2.png";
 import image3 from "../../components/Followers/img/img-3.png";
 import image4 from "../../components/Followers/img/img-4.png";
 import img1 from "../../components/Posts/img/img1.jpeg";
+import img2 from "../../components/Posts/img/img2.jpeg";
+import img3 from "../../components/Posts/img/img3.jpeg";
 
 export const userSlice = createSlice({
   name: 'user',
@@ -37,9 +39,17 @@ export const userSlice = createSlice({
         img: image4,
       }
     ],
-    post: [{
-      img1: img1,
-    }],
+    post: [
+      {
+        img1: img1,
+      },
+      {
+        img2: img2,
+      },
+      {
+        img3: img3
+      }
+  ],
     following: [
       {
         id: 1,

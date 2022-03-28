@@ -9,6 +9,18 @@ import img1 from "../Posts/img/img1.jpeg";
 import img2 from "../Posts/img/img2.jpeg";
 import img3 from "../Posts/img/img3.jpeg";
 
+// const imgContent = (props) => {
+//     return(
+//         <div className='contenido'>
+//             <div className='content-images'>
+//                 <img src={props.data.img1} alt='image1' className='image1' />
+//                 <img src={props.data.img2} alt='image2' className='image2' />
+//                 <img src={props.data.img3} alt='image3' className='image3' />
+//             </div>
+//         </div>
+//     )
+// }
+
 const Posts = () => {
 
 //   const user = useSelector((state) => state.user);
@@ -33,7 +45,7 @@ const Posts = () => {
         </div>
         {/* <div>
             {user.post.map(item => (
-                <imageContent key={item.id} data={item}/>
+                <imgContent data={item} key={item.id} />
             ))}
         </div> */}
         <div className='contenido'>
@@ -46,17 +58,5 @@ const Posts = () => {
     </div>
   )
 }
-
-// const imageContent = (props) => {
-//     return(
-//         <div className='contenido'>
-//             <div className='content-images'>
-//                 <img src={props.data.img1} alt='image1' className='image1' />
-//                 <img src={props.data.img1} alt='image2' className='image2' />
-//                 <img src={props.data.img1} alt='image3' className='image3' />
-//             </div>
-//         </div>
-//     )
-// }
 
 export default Posts;

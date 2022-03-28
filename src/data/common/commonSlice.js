@@ -5,6 +5,7 @@ export const commonSlice = createSlice({
   initialState: {
     showModal: false,
     showFollowersModal: false,
+    showPosts: true,
   },
   reducers: {
     changeModal: (state) => {
@@ -22,11 +23,15 @@ export const commonSlice = createSlice({
     closeModal: (state) => {
       state.showModal = false;
       state.showFollowersModal = false;
+    },
+    changePosts: (state) => {
+      state.showModal = false;
+      state.showFollowersModal = false;
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { changeModal, changeFollowersModal, closeModal } = commonSlice.actions
+export const { changeModal, changeFollowersModal, closeModal, changePosts } = commonSlice.actions
 
 export default commonSlice.reducer
