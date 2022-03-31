@@ -5,21 +5,6 @@ import {HiOutlinePlay} from "react-icons/hi";
 import {CgBookmark} from "react-icons/cg";
 import {RiPriceTag2Line} from "react-icons/ri";
 import { useSelector } from 'react-redux';
-// import img1 from "../Posts/img/img1.jpeg";
-// import img2 from "../Posts/img/img2.jpeg";
-// import img3 from "../Posts/img/img3.jpeg";
-
-// const imgContent = (props) => {
-//     return(
-//         <div className='contenido'>
-//             <div className='content-images'>
-//                 <img src={props.data.img1} alt='image1' className='image1' />
-//                 <img src={props.data.img2} alt='image2' className='image2' />
-//                 <img src={props.data.img3} alt='image3' className='image3' />
-//             </div>
-//         </div>
-//     )
-// }
 
 const Posts = () => {
 
@@ -43,11 +28,6 @@ const Posts = () => {
                 </span>
             </div>
         </div>
-        {/* <div>
-            {user.post.map(item => (
-                <imgContent data={item} key={item.id} />
-            ))}
-        </div> */}
         <div className='contenido'>
             <div className='content-images'>
                 {user.post.map(item => (

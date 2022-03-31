@@ -11,9 +11,8 @@ const FollowingCard = (props) => {
 
     const dispatch = useDispatch();
 
-    const handleOnFollowingClick = (e) => {
+    const handleOnFollowingClick = () => {
       dispatch(unfollowRequest({id: props.data.id}));
-      console.log(e.target.id);
     }
 
     const handleFollowingClick = () => {
