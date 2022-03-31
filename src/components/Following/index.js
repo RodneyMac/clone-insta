@@ -45,7 +45,7 @@ const Following = () => {
           <div className='modal-items-personas'>Personas</div>
           <div className='modal-items-hashtags'>Hashtags</div>
         </div>
-        <div>
+        <div className='modal-content'>
           {user.following.map(item => (
             <FollowingCard data={item} key={item.id}/>
           ))}

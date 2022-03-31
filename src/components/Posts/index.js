@@ -4,10 +4,10 @@ import {AiOutlineTable} from "react-icons/ai";
 import {HiOutlinePlay} from "react-icons/hi";
 import {CgBookmark} from "react-icons/cg";
 import {RiPriceTag2Line} from "react-icons/ri";
-// import { useSelector } from 'react-redux';
-import img1 from "../Posts/img/img1.jpeg";
-import img2 from "../Posts/img/img2.jpeg";
-import img3 from "../Posts/img/img3.jpeg";
+import { useSelector } from 'react-redux';
+// import img1 from "../Posts/img/img1.jpeg";
+// import img2 from "../Posts/img/img2.jpeg";
+// import img3 from "../Posts/img/img3.jpeg";
 
 // const imgContent = (props) => {
 //     return(
@@ -23,7 +23,8 @@ import img3 from "../Posts/img/img3.jpeg";
 
 const Posts = () => {
 
-//   const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
+  console.log(user.post[0].img1);
 
   return (
     <div className='contenedor'>
@@ -50,9 +51,9 @@ const Posts = () => {
         </div> */}
         <div className='contenido'>
             <div className='content-images'>
-                <img src={img1} alt='image1' className='image1' />
-                <img src={img2} alt='image2' className='image2' />
-                <img src={img3} alt='image3' className='image3' />
+                {user.post.map(item => (
+                    <img src={item.img} alt='image1' className='image1' />
+                ))}
             </div>
         </div>
     </div>

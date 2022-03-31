@@ -5,6 +5,7 @@ import UserDetails from '../components/UserDetails';
 import Following from '../components/Following';
 import Followers from '../components/Followers';
 import Posts from '../components/Posts';
+import "../view/ProfileView.css";
 
 const ProfileView = () => {
   const user = useSelector((state) => state.user);
@@ -13,11 +14,13 @@ const ProfileView = () => {
   return (
     <div>
       <Nav/>
-      <UserDetails user={user}/>
-      {common.showModal && <Following/>}
-      {common.showFollowersModal && <Followers/>}
-      {common.showPosts && <Posts/>}
-      {/* <Posts/> */}
+      <div className='content-app'>
+        <UserDetails user={user}/>
+        {common.showModal && <Following/>}
+        {common.showFollowersModal && <Followers/>}
+        {common.showPosts && <Posts />}
+        {/* <Posts/> */}
+      </div>
     </div>
   )
 }

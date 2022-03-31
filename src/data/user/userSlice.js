@@ -41,13 +41,13 @@ export const userSlice = createSlice({
     ],
     post: [
       {
-        img1: img1,
+        img: img1,
       },
       {
-        img2: img2,
+        img: img2,
       },
       {
-        img3: img3
+        img: img3
       }
   ],
     following: [

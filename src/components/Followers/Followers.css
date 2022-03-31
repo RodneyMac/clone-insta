@@ -4,6 +4,10 @@
     border: 1px solid gray;
     border-radius: 12px;
     margin: auto;
+    background: #fff;
+    position: absolute;
+    right: 39.6%;
+    /* right: 39%; */
 }
 
 .followers-modal-header {

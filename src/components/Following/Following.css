@@ -4,6 +4,10 @@
     height: 310px;
     border: 1px solid gray;
     border-radius: 12px;
+    background: #fff;
+    position: absolute;
+    /* right: 39%; */
+    right: 39.6%;
 }
 
 .modal-header {
@@ -65,3 +69,7 @@
     font-weight: 600;
     border-bottom: 1px solid rgba(219,219,219,1);
 }
+
+/* .modal-content {
+    background-color: blue;
+} */
