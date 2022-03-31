@@ -4,15 +4,20 @@ import {GrClose} from "react-icons/gr";
 import "../Following/FollowingCard.css";
 import {closeModal} from "../../data/common/commonSlice";
 import { useSelector, useDispatch } from 'react-redux';
-import {followUnfollow} from "../../data/user/userSlice";
+import {unfollowRequest} from "../../data/user/userSlice";
+import {followRequest} from "../../data/user/userSlice";
 
 const FollowingCard = (props) => {
 
     const dispatch = useDispatch();
-    const show = true ? "Siguiendo" : "Seguir";
+
+    const handleOnFollowingClick = (e) => {
+      dispatch(unfollowRequest({id: props.data.id}));
+      console.log(e.target.id);
+    }
 
     const handleFollowingClick = () => {
-      dispatch(followUnfollow(show));
+      dispatch(followRequest({id: props.data.id}));
     }
 
     return(
@@ -23,8 +28,8 @@ const FollowingCard = (props) => {
         <div className='name-card'>{props.data.name}</div>
       </div>
       <div className='div-btn-following-card'>
-        <button className='btn-following-card' onClick={handleFollowingClick}>{show}</button>
-        {/* <button className='btn-following-card'>Siguiendo</button> */}
+        {props.data.following ? <button className='btn-following-card' onClick={handleOnFollowingClick} id={props.data.id}>Siguiendo</button>
+        : <button className='btn-following-card' onClick={handleFollowingClick} id={props.data.id}>Seguir</button>}
       </div>
     </div>
   )

@@ -56,30 +56,32 @@ export const userSlice = createSlice({
         username: "johnnyrotten",
         name: "John",
         img: image1,
+        following: true
       },
       {
         id: 2,
         username: "moonkate",
         name: "Kate",
-        img: image2
+        img: image2,
+        following: true
       },
       {
         id: 3,
         username: "paul_90",
         name: "Paul",
-        img: image3
+        img: image3,
+        following: true
       },
       {
         id: 4,
         username: "onlynani",
         name: "Hannah",
-        img: image4
+        img: image4,
+        following: true
       }
     ],
     img: "https://illumesense.com/resources/illumesense/style/img/website/profile-picture-blanks/male-profile.jpg"
   },
-
-  unfollow: true,
 
   reducers: {
     changeName: (state) => {
@@ -88,42 +90,35 @@ export const userSlice = createSlice({
     deleteFollower: (state, action) => {
       return ({
         ...state,
-        followers: state.followers.filter((item) => item.id != action.payload.id)
+        followers: state.followers.filter((item) => item.id !== action.payload.id)
       })
     },
-    followUnfollow: (state) => {
-        if(state.unfollow) {
-          return {
-            unfollow: !state.unfollow
+    unfollowRequest: (state, action) => {
+      return ({
+        ...state,
+        following: state.following.map((item) => {
+          if(item.id === action.payload.id) {
+            return {...item, following: false}
           }
-        }
-        return state
+          return item;
+        })
+      })
+    },
+    followRequest: (state, action) => {
+      return({
+        ...state,
+        following: state.following.map((item) => {
+          if(item.id === action.payload.id) {
+            return {...item, following: true}
+          }
+          return item;
+        })
+      })
     }
-    // followUnfollow: (state, action) => {
-    //   return({
-    //     ...state,
-    //     following: state.following.filter((item) => item.id != action.payload.id ? true : false)
-    //   });
-    // }
-    // unfollow: (state) => {
-    //     state.following = true ? "Siguiendo" : "Seguir";
-    // }
-    // unfollow: (state, action) => {
-    //   return({
-    //     ...state,
-    //     following: state.following.filter((item) => item.id != action.payload.id && item.id === true ? "Siguiendo" : "Seguir")
-    //   })
-    // }
-    // unfollow: (state, action) => {
-    //   return({
-    //     ...state,
-    //     following: state.following.filter((item) => item.id != action.payload.id)
-    //   });
-    // }
-  },
+  }
 });
 
 // Action creators are generated for each case reducer function
-export const { changeName, deleteFollower, followUnfollow} = userSlice.actions
+export const { changeName, deleteFollower, unfollowRequest, followRequest} = userSlice.actions
 
 export default userSlice.reducer

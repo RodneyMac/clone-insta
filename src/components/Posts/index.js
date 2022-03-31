@@ -24,7 +24,6 @@ import { useSelector } from 'react-redux';
 const Posts = () => {
 
   const user = useSelector((state) => state.user);
-  console.log(user.post[0].img1);
 
   return (
     <div className='contenedor'>
@@ -52,7 +51,7 @@ const Posts = () => {
         <div className='contenido'>
             <div className='content-images'>
                 {user.post.map(item => (
-                    <img src={item.img} alt='image1' className='image1' />
+                    <img src={item.img} alt='image1' className='image1' key={item.img} />
                 ))}
             </div>
         </div>

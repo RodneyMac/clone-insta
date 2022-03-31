@@ -19,7 +19,6 @@ const ProfileView = () => {
         {common.showModal && <Following/>}
         {common.showFollowersModal && <Followers/>}
         {common.showPosts && <Posts />}
-        {/* <Posts/> */}
       </div>
     </div>
   )
