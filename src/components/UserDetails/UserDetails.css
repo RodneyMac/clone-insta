@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Besley:wght@400;500;700&family=Kite+One&family=Montserrat:wght@100;200;300;400;600&family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;300;400;500;700&family=Quicksand:wght@300&family=Roboto:wght@100;300;400;500;700&family=Source+Code+Pro:ital,wght@0,200;0,400;0,700;1,200&display=swap');
 
+body {
+  background-color: #fafafa;
+}
+
 .user-container {
-  display: flex;
-  justify-content: center;
   padding: 90px 20px 0px;
-  /* padding: 30px 20px 0px; */
+  margin: 0 187px;
+}
+
+.user-content {
+  display: flex;
   width: 100%;
-  max-width: 1349px;
-  /* background-color: lime; */
-}
-
-.user-img {
-  /* display: flex; */
-  /* margin: 0 30px 0 0; */
-}
-
-.user-date {
-  /* display: flex; */
+  max-width: 975px;
+  margin: 0 0 44px;
 }
 
 .user-img-container {
+  display: flex;
+  justify-content: center;
   width: 100%;
   max-width: 291px;
   margin-right: 30px;
   text-align: center;
+  margin: 0 30px 0 0;
 }
 
 .perfil-image {
@@ -41,7 +41,7 @@
 
 .user-content-date {
   display: flex;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .user-name {
@@ -79,7 +79,8 @@
 }
 
 .user-count {
-  display: flex;  
+  display: flex;
+  margin: 0 0 25px;
 }
 
 .div-count {
@@ -88,4 +89,18 @@
 
 .d-c, .div-count {
   cursor: pointer;
+}
+
+/*------------------ MEDIA -------------------*/
+
+@media (max-width: 700px) {
+  .user-container {
+    width: 100%;
+    max-width: 1349px;
+  }
+
+  .user-content {
+    width: 100%;
+    max-width: 1349px;
+  }
 }

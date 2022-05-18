@@ -83,10 +83,29 @@
 @media screen and (max-width: 640px) {
   .nav-container {
     width: 100%;
-    max-width: 1349px;
+    max-width: 975px;
   }
+
+  /* .nav-content {
+    width: 100%;
+    max-width: 975px;
+  } */
+
+  /* .nav-logo {
+    padding: 0 20px;
+  } */
+
+  /* .img-logo {
+    width: 100%;
+    max-width: 103px;
+  } */
 
   .nav-search {
     display: none;
   }
+
+  /* .nav-icons {
+    width: 100%;
+    max-width: 375px;
+  } */
 }
