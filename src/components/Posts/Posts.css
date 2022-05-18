@@ -1,27 +1,21 @@
 .posts-contenedor {
     display: flex;
-    /* padding: 30px 20px 0; */
 }
 
 .posts-content {
-    display: flex;
-    flex-direction: column;
     margin: auto;
     border-top: 1px solid rgba(219,219,219,1);
 }
 
 .iconos-contenido {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     height: 53px;
 }
 
 .i-content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0px 60px 0px 0px;
+    margin: 0px 55px 0px 0px;
 }
 
 .items-c {
@@ -39,7 +33,7 @@
 }
 
 .icon-p {
-    width: 12px;
+    width: 14px;
 }
 
 .videos {
@@ -80,19 +74,19 @@
 }
 
 .contenido {
-    display: flex;
-    justify-content: center;
+    display: grid;
     width: 100%;
     max-width: 935px;
+    justify-content: center;
 }
 
-.image1, .image2, .image3 {
+.imagen {
     width: 293px;
     height: 293px;
-    margin-left: 14px;
-    margin-right: 14px;
 }
 
 .content-images {
     display: flex;
+    gap: 28px;
+    margin: 0 0 28px;
 }

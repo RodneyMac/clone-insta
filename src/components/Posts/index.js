@@ -32,7 +32,7 @@ const Posts = () => {
             <div className='contenido'>
                 <div className='content-images'>
                     {user.post.map(item => (
-                        <img src={item.img} alt='image1' className='image1' key={item.img} />
+                        <img src={item.img} alt='image1' className='imagen' key={item.img} />
                     ))}
                 </div>
             </div>
