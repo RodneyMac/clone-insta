@@ -1,12 +1,18 @@
-.contenedor {
+.posts-contenedor {
+    /* width: 940px; */
+    padding: 40px;
+    /* background-color: yellow; */
+}
+
+.posts-content {
+    /* background-color: lightgreen; */
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: auto;
-    justify-content: center;
-    text-align: center;
-    width: 940px;
+    width: 100%;
+    max-width: 940px;
     border-top: 1px solid rgba(219,219,219,1);
-    margin-top: 40px;
 }
 
 .iconos-contenido {

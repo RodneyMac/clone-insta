@@ -15,7 +15,7 @@ const Nav = () => {
 
   return(
     <div className='nav-container'>
-        <nav className='nav-content'>
+        <div className='nav-content'>
             <div className='nav-logo'><img src={instaLogo} alt="instaLogo" className='img-logo'/></div>
             <div className='nav-search'>
               <BiSearch className='search-icon'/>
@@ -28,9 +28,8 @@ const Nav = () => {
                 <div className='div-icon'><MdExplore className="n-i"/></div>
                 <div className='div-icon'><AiOutlineHeart className="n-i"/></div>
                 <div className='user-circle div-icon n-i'><img src={user.img} alt="img-logo-nav" className='img-nav-logo'/></div>
-                
             </div>
-        </nav>
+        </div>
     </div>
   )
 }

@@ -1,28 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Besley:wght@400;500;700&family=Kite+One&family=Montserrat:wght@100;200;300;400;600&family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;300;400;500;700&family=Quicksand:wght@300&family=Roboto:wght@100;300;400;500;700&family=Source+Code+Pro:ital,wght@0,200;0,400;0,700;1,200&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .user-container {
   display: flex;
   justify-content: center;
-  padding: 30px 20px 0px;
+  padding: 90px 20px 0px;
+  /* padding: 30px 20px 0px; */
+  width: 100%;
+  max-width: 1349px;
+  /* background-color: lime; */
 }
 
 .user-img {
-  display: flex;
-  margin: 0 30px 0 0;
+  /* display: flex; */
+  /* margin: 0 30px 0 0; */
 }
 
 .user-date {
-  display: flex;
+  /* display: flex; */
 }
 
 .user-img-container {
-  width: 291px;
+  width: 100%;
+  max-width: 291px;
   margin-right: 30px;
   text-align: center;
 }
@@ -36,7 +35,8 @@
 .user-date {
   display: flex;
   flex-direction: column;
-  width: 613px;
+  width: 100%;
+  max-width: 613px;
 }
 
 .user-content-date {

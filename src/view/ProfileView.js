@@ -12,9 +12,9 @@ const ProfileView = () => {
   const common = useSelector((state) => state.common);
 
   return (
-    <div>
+    <div className='content-app'>
       <Nav/>
-      <div className='content-app'>
+      <div className='profile-body-content'>
         <UserDetails user={user}/>
         {common.showModal && <Following/>}
         {common.showFollowersModal && <Followers/>}
