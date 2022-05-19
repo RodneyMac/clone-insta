@@ -38,16 +38,18 @@ const Followers = () => {
   }
 
   return (
-    <div className='followers-modal-container'>
-        <div className='followers-modal-header'>
-            <div className='div-modal-h-1'></div>
-            <div className='div-modal-h-title'>Seguidores</div>
-            <div className='div-modal-h-icon'><GrClose className='followers-icon-exit' onClick={handleCloseModalFollowers}/></div>
-        </div>
-        <div>
-          {user.followers.map(item => (
-            <FollowersCard key={item.id} data={item}/>
-          ))}
+    <div className='contenedor-modal-followers'>
+        <div className='followers-modal-container'>
+          <div className='followers-modal-header'>
+              <div className='div-modal-h-1'></div>
+              <div className='div-modal-h-title'>Seguidores</div>
+              <div className='div-modal-h-icon'><GrClose className='followers-icon-exit' onClick={handleCloseModalFollowers}/></div>
+          </div>
+          <div>
+            {user.followers.map(item => (
+              <FollowersCard key={item.id} data={item}/>
+            ))}
+          </div>
         </div>
     </div>
   )

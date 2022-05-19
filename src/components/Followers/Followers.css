@@ -1,3 +1,11 @@
+.contenedor-modal-followers {
+    display: flex;
+    margin: auto;
+    top: 36%;
+    right: 65%;
+    position: fixed;
+}
+
 .followers-modal-container {
     width: 400px;
     height: 310px;
@@ -6,8 +14,6 @@
     margin: auto;
     background: #fff;
     position: absolute;
-    right: 39.6%;
-    /* right: 39%; */
 }
 
 .followers-modal-header {
@@ -96,4 +102,20 @@
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     color: #262626;
     cursor: pointer;
+}
+
+@media (max-width: 1118px) {
+    .contenedor-modal-followers {
+        display: flex;
+        right: 68.2%;
+        top: 32%;
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor-modal-followers {
+        display: flex;
+        right: 71.6%;
+        top: 19%;
+    }
 }

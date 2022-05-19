@@ -1,4 +1,12 @@
-.modal-container {
+.following-modal-container {
+    display: flex;
+    margin: auto;
+    top: 36%;
+    right: 65%;
+    position: fixed;
+}
+
+.following-modal-content {
     margin: auto;
     width: 400px;
     height: 310px;
@@ -6,9 +14,6 @@
     border-radius: 12px;
     background: #fff;
     position: absolute;
-    /* right: 39%; */
-    right: 39.6%;
-    /* background-color: yellowgreen; */
 }
 
 .modal-header {
@@ -71,6 +76,18 @@
     border-bottom: 1px solid rgba(219,219,219,1);
 }
 
-/* .modal-content {
-    background-color: blue;
-} */
+@media (max-width: 1118px) {
+    .following-modal-container {
+        display: flex;
+        right: 68.2%;
+        top: 32%;
+    }
+}
+
+@media (max-width: 700px) {
+    .following-modal-container {
+        display: flex;
+        right: 71.6%;
+        top: 19%;
+    }
+}

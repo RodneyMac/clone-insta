@@ -43,16 +43,18 @@ const Following = () => {
     dispatch(closeModal());
   }
   return (
-    <div className='modal-container'>
-        <div className='modal-header'><div className='div-1'></div><h2 className='modal-title'>Siguiendo</h2><div className='div-icon-exit'><GrClose className='icon-exit' onClick={handleCloseModal}/></div></div>
-        <div className='modal-items'>
-          <div className='modal-items-personas'>Personas</div>
-          <div className='modal-items-hashtags'>Hashtags</div>
-        </div>
-        <div className='modal-content'>
-          {user.following.map(item => (
-            <FollowingCard data={item} key={item.id}/>
-          ))}
+    <div className='following-modal-container'>
+        <div className='following-modal-content'>
+          <div className='modal-header'><div className='div-1'></div><h2 className='modal-title'>Siguiendo</h2><div className='div-icon-exit'><GrClose className='icon-exit' onClick={handleCloseModal}/></div></div>
+          <div className='modal-items'>
+            <div className='modal-items-personas'>Personas</div>
+            <div className='modal-items-hashtags'>Hashtags</div>
+          </div>
+          <div className='modal-content'>
+            {user.following.map(item => (
+              <FollowingCard data={item} key={item.id}/>
+            ))}
+          </div>
         </div>
     </div>
   )
